@@ -18,7 +18,9 @@ for c in major:
 
 with open('graduates.json', 'w') as outfile:
     json.dump(onlyMajorInformation, outfile)
+
 radomshow=random.sample (onlyMajorInformaion,3)
+
 print(onlyMajorInformation)
 
 for show in randomshow:
