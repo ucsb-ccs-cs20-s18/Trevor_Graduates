@@ -7,22 +7,22 @@ import random
 with open('graduates.json') as json_data:
     graduate = json.load(json_data)
 
-#shorterList = graduate[0:3]
+shorterList = graduate[0:3]
 def MajorInformation(c):
-    return c['Major Information']=='PETROLEUM ENGINEERING'
+    return c['Major Information']['Major']=='PETROLEUM ENGINEERING'
 
 onlyMajorInformation=[]
 for c in graduate:
     if MajorInformation(c):
         onlyMajorInformation.append(c)
 
-with open('graduates.json', 'w') as outfile:
+with open('graduates2.json', 'w') as outfile:
     json.dump(onlyMajorInformation, outfile)
 
-radomshow=random.sample (onlyMajorInformaion,3)
+radomshow=random.sample (onlyMajorInformation,1)
 
 print(onlyMajorInformation)
 
-#for show in randomshow:
-   # print('{:10} {:25}'.format(show['Show']['Name'][0:10], show['Show']['Type']
-   #print(show['Show']['Name'],show['Show']['Type'])
+###for show in randomshow:
+##   # print('{:10} {:25}'.format(show['Show']['Name'][0:10], show['Show']['Type']
+##   #print(show['Show']['Name'],show['Show']['Type'])
